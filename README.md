@@ -1,6 +1,6 @@
 # Shark Tooth Data Collector
 
-Uses OpenCV to take circle measurements of Shark Teeth, replace the background with transparency, and 
+Uses OpenCV to take circle measurements of Shark Teeth, replace the background with transparency, and crop/shrink the images to a smaller size
 
 ### Background
 
@@ -47,12 +47,12 @@ Visually displays extra intermediate steps for debugging purposes, including raw
 
 (Note that the background is transparent, not white, and that the scale bar has been stripped out)
 
-![]
+![](https://raw.githubusercontent.com/dralley/shark_tooth_data_collector/master/ExampleOutput/4-15-901-ling.png)
 
 
 ##### Debugging Output
 
-![http://i.imgur.com/xmULqSt.png]
+![](http://i.imgur.com/xmULqSt.png)
 
 
 Dependencies:
