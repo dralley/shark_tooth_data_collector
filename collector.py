@@ -45,7 +45,6 @@ class ToothPic:
         self.scale = self._get_scale()
         # Size of the tooth
         self.measurement = self.measure()
-
         # Key, crop and resize the image
         self.scaled = self._key_and_resize()
 
@@ -180,7 +179,7 @@ class ToothPic:
             self.debug_imgs["crop"] = self.image.copy()
             cv2.rectangle(self.debug_imgs["crop"], point1, point2, Colors.GREEN, 3)
 
-            self.debug_imgs["scaled"] = self.scaled
+            self.debug_imgs["scaled"] = scaled
 
         return scaled
 
@@ -189,7 +188,7 @@ class ToothPic:
         """
         tooth_contour = self._get_tooth_contour()
 
-        def tooth_round(pix_diam, scale, alpha=.15):
+        def tooth_round(pix_diam, scale, alpha=.2):
             """ If the difference between the actual tooth diameter (in mm) and a smaller tooth measurement is less than
             alpha x 1mm, round down to the smaller measurement.  Otherwise, round upward.
             """
@@ -286,7 +285,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='CitizenScience Image Processor')
 
     parser.add_argument('source')
-    parser.add_argument('destination')
+    parser.add_argument('destination', nargs="?")
 
     parser.add_argument('--debug', '-d', action='store_true', help='debug flag')
     parser.add_argument('--verbose', '-v', action='store_true', help='verbose debugging flag')
