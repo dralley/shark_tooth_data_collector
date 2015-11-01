@@ -285,7 +285,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='CitizenScience Image Processor')
 
     parser.add_argument('source')
-    parser.add_argument('destination', nargs="?")
+    parser.add_argument('destination')
 
     parser.add_argument('--debug', '-d', action='store_true', help='debug flag')
     parser.add_argument('--verbose', '-v', action='store_true', help='verbose debugging flag')
